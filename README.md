@@ -68,13 +68,13 @@ print(json_output)
 
 ⸻
 
-### 🙏 Credits
+## 🙏 Credits
 
 This project is built using the open-source OCR library originally developed by Mindee.
 
 ⸻
 
-### 📜 License / Usage Policy
+## 📜 License / Usage Policy
 
 This repository is published for learning and demo purposes.
 
