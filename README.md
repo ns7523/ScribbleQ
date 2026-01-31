@@ -1,16 +1,7 @@
-# ScribbleQ (HWTE)
-### Handwritten Text Extraction & Digitization  
-**by Ns Akash (@craftiq)**
+# ScribbleQ (HWTE) [![Open Live Demo](https://img.shields.io/badge/🚀%20Open%20Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://scribbleq.streamlit.app)
+### Handwritten Text Extraction & Digitization  **by Ns Akash (@craftiq)**
 
 **ScribbleQ (HWTE)** is a Streamlit-based handwritten OCR application that extracts handwritten text from **PDFs and Images** and converts it into editable digital text.
-
----
-
-## 🚀 Live Demo
-
-[![Open Live Demo](https://img.shields.io/badge/🚀%20Open%20Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://scribbleq.streamlit.app)
-
----
 
 ## ✨ Features
 - End-to-End OCR (**Text Detection + Text Recognition**)
