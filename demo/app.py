@@ -11,12 +11,10 @@ import numpy as np
 import streamlit as st # frontend
 import torch
 from backend.pytorch import DET_ARCHS, RECO_ARCHS, forward_image, load_predictor
-
 from hwte.io import DocumentFile
 from hwte.utils.visualization import visualize_page
 
 forward_device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
 
 def main(det_archs, reco_archs):
     """Build a streamlit layout"""
