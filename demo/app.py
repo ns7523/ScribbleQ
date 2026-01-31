@@ -4,12 +4,12 @@
 # See LICENSE or go to <https://opensource.org/licenses/Apache-2.0> for full license details.
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-os.environ["DOCTR_FONT"] = os.path.join(os.path.dirname(__file__), "DejaVuSans.ttf")
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st # frontend
 import torch
+import streamlit.components.v1 as components
 from demo.backend.pytorch import DET_ARCHS, RECO_ARCHS, forward_image, load_predictor
 from hwte.io import DocumentFile
 from hwte.utils.visualization import visualize_page
@@ -110,7 +110,14 @@ def main(det_archs, reco_archs):
 
                 # Plot OCR output
                 out = predictor([page])
-                fig = visualize_page(out.pages[0].export(), out.pages[0].page, interactive=False, add_labels=False)
+                fig = visualize_page(
+                                    out.pages[0].export(),
+                                    out.pages[0].page,
+                                    interactive=False,
+                                    add_labels=False,
+                                    font_family=os.path.join(os.path.dirname(__file__), "DejaVuSans.ttf")
+                                )
+                #fig = visualize_page(out.pages[0].export(), out.pages[0].page, interactive=False, add_labels=False)
                 cols[2].pyplot(fig)
 
                 # Page reconstruction under input page
@@ -146,7 +153,32 @@ def main(det_archs, reco_archs):
 
     if st.session_state["recognized_text"].strip():
         st.subheader("🧾 Extracted Text")
-        st.text_area("Recognized Output", st.session_state["recognized_text"], height=200)
+
+        c1, c2 = st.columns([0.92, 0.08])
+        
+        with c1:
+            st.text_area("Recognized Output", st.session_state["recognized_text"], height=200)
+        
+        with c2:
+            # Copy button (clipboard icon)
+            components.html(
+                f"""
+                <script>
+                function copyText() {{
+                    navigator.clipboard.writeText({st.session_state["recognized_text"]!r});
+                }}
+                </script>
+                <button onclick="copyText()" style="
+                    width:100%;
+                    height:42px;
+                    font-size:18px;
+                    border-radius:10px;
+                    cursor:pointer;
+                    border:1px solid #ccc;
+                ">📋</button>
+                """,
+                height=70
+            ))
 
         from googletrans import Translator
         from fpdf import FPDF  # fpdf2 is compatible with this import
