@@ -5,6 +5,6 @@ matplotlib
 torch
 torchvision
 fpdf2
-googletrans==4.0.0rc1
+googletrans==4.0.2
 python-doctr[torch]
 Pillow
