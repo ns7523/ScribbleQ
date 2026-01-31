@@ -51,7 +51,8 @@ scribbleq/
 ├── hwte/
 └── README.md
 ```
-⸻
+---
+
 ## 🧠 Example Usage (Python)
 
 from hwte.io import DocumentFile
@@ -75,4 +76,4 @@ This project is built using the open-source OCR library originally developed by 
 This repository is published for learning and demo purposes.
 
 This repository is proprietary.
-Viewing is permitted, but **copying / modifying / redistributing is not
+Viewing is permitted, but ** copying / modifying / ** redistributing is not
