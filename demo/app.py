@@ -178,7 +178,7 @@ def main(det_archs, reco_archs):
                 ">📋</button>
                 """,
                 height=70
-            ))
+            )
 
         from googletrans import Translator
         from fpdf import FPDF  # fpdf2 is compatible with this import
