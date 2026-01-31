@@ -55,6 +55,7 @@ scribbleq/
 
 ## 🧠 Example Usage (Python)
 
+```text
 from hwte.io import DocumentFile
 from hwte.models import ocr_predictor
 
@@ -62,10 +63,12 @@ model = ocr_predictor(pretrained=True)
 doc = DocumentFile.from_pdf("path/to/your/doc.pdf")
 
 result = model(doc)
-
+```
 ## Export JSON structured output
+```text
 json_output = result.export()
 print(json_output)
+```
 
 ## 🙏 Credits
 
