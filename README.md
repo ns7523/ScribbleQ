@@ -66,13 +66,9 @@ result = model(doc)
 json_output = result.export()
 print(json_output)
 
-⸻
-
 ## 🙏 Credits
 
 This project is built using the open-source OCR library originally developed by Mindee.
-
-⸻
 
 ## 📜 License / Usage Policy
 
