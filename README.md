@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://doctr-static.mindee.com/hwte/raw/main/docs/images/Logo_hwte.gif" width="40%">
-</p>
-
 # ScribbleQ (HWTE)
 ### Handwritten Text Extraction & Digitization  
 **by Ns Akash (@craftiq)**
@@ -30,7 +26,7 @@
 - Python
 - Streamlit
 - PyTorch
-- HWTE / Doctr OCR Engine
+- Mindee/ OCR Engine
 - OpenCV, NumPy, Matplotlib
 - fpdf2 *(PDF export)*
 - googletrans *(Translation)*
