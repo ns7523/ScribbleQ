@@ -22,7 +22,7 @@ def main(det_archs, reco_archs):
     """Build a streamlit layout"""
     # Wide mode
     st.set_page_config(
-        page_title="ScribbleQ",
+        page_title="ScribbleQ (HWTE)",
         page_icon="✍️",
         layout="wide",
     )
