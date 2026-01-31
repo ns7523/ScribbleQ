@@ -30,7 +30,7 @@ def main(det_archs, reco_archs):
 
     # Designing the interface
     st.title("ScribbleQ ")
-    st.caption("Handwritten Text Extraction & Digitization (HWTE)")
+    st.subheader("Handwritten Text Extraction & Digitization (HWTE)")
     #st.markdown("Handwritten Text Extraction & Digitization (HWTE)")
     # For newline
     st.write("\n")
@@ -160,55 +160,28 @@ def main(det_archs, reco_archs):
 
     if st.session_state["recognized_text"].strip():
         st.subheader("🧾 Extracted Text")
-
-        st.subheader("🧾 Extracted Text")
-
-        recognized = st.session_state["recognized_text"]
         
-        components.html(
-            f"""
-            <style>
-            .box {{
-                position: relative;
-                width: 100%;
-            }}
-            .copy-btn {{
-                position: absolute;
-                top: 8px;
-                right: 10px;
-                z-index: 10;
-                border: 1px solid #ccc;
-                background: white;
-                border-radius: 10px;
-                padding: 6px 10px;
-                cursor: pointer;
-                font-size: 16px;
-            }}
-            textarea {{
-                width: 100%;
-                height: 220px;
-                padding: 12px;
-                padding-top: 40px;  /* space for button */
-                border-radius: 10px;
-                border: 1px solid #ccc;
-                font-size: 14px;
-                resize: none;
-            }}
-            </style>
+        c1, c2 = st.columns([0.92, 0.08], vertical_alignment="top")
         
-            <div class="box">
-                <button class="copy-btn" onclick="copyText()">📋</button>
-                <textarea readonly>{recognized}</textarea>
-            </div>
+        with c1:
+            st.text_area(
+                "Recognized Output",
+                st.session_state["recognized_text"],
+                height=200
+            )
         
-            <script>
-            function copyText() {{
-                navigator.clipboard.writeText({recognized!r});
-            }}
-            </script>
-            """,
-            height=260
-        )
+        with c2:
+            st.markdown("####")  # spacing
+            if st.button("📋", key="copy_clipboard"):
+                components.html(
+                    f"""
+                    <script>
+                    navigator.clipboard.writeText({st.session_state["recognized_text"]!r});
+                    </script>
+                    """,
+                    height=0
+                )
+                st.success("Copied ✅")
 
         from googletrans import Translator
         from fpdf import FPDF  # fpdf2 is compatible with this import
