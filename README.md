@@ -1,7 +1,3 @@
-Sure Ns ✅ here is the full README.md in proper Markdown (.md) format for your ScribbleQ (HWTE) project (final version).
-
-Copy-paste directly into README.md:
-
 <p align="center">
   <img src="https://doctr-static.mindee.com/hwte/raw/main/docs/images/Logo_hwte.gif" width="40%">
 </p>
@@ -22,11 +18,11 @@ Copy-paste directly into README.md:
 
 ## ✨ Features
 - End-to-End OCR (**Text Detection + Text Recognition**)
-- Supports **PDF** and **Image** uploads (JPG / PNG / JPEG)
+- Supports **PDF** and **Image** uploads (**JPG / PNG / JPEG**)
 - Streamlit UI for quick testing and usage
 - Display OCR output as structured JSON
 - Export recognized text in **TXT** and **PDF**
-- Translation support (optional)
+- Translation support *(optional)*
 
 ---
 
@@ -36,8 +32,8 @@ Copy-paste directly into README.md:
 - PyTorch
 - HWTE / Doctr OCR Engine
 - OpenCV, NumPy, Matplotlib
-- fpdf2 (PDF export)
-- googletrans (translation)
+- fpdf2 *(PDF export)*
+- googletrans *(Translation)*
 
 ---
 
@@ -54,25 +50,9 @@ scribbleq/
 │   │   └── pytorch.py
 ├── hwte/
 └── README.md
-
-
+```
 ⸻
-
-🚀 Run Locally
-
-1) Install dependencies
-
-pip install -r requirements.txt
-
-2) Run Streamlit
-
-streamlit run streamlit_app.py
-
-Pretrained models will download automatically the first time you run OCR.
-
-⸻
-
-🧠 Example Usage (Python)
+## 🧠 Example Usage (Python)
 
 from hwte.io import DocumentFile
 from hwte.models import ocr_predictor
@@ -86,12 +66,11 @@ result = model(doc)
 json_output = result.export()
 print(json_output)
 
-
 ⸻
 
 🙏 Credits
 
-This project is built using the open-source HWTE / Doctr OCR library originally developed by Mindee.
+This project is built using the open-source OCR library originally developed by Mindee.
 
 ⸻
 
@@ -99,15 +78,5 @@ This project is built using the open-source HWTE / Doctr OCR library originally 
 
 This repository is published for learning and demo purposes.
 
-This repository is proprietary. Viewing is permitted, copying/modifying/redistributing is not allowed without written permission.
-
-⸻
-
-© Copyright
-
-© 2026 CraftIQ — Ns Akash. All rights reserved.
-
-If you want, I can also add:
-✅ screenshots section  
-✅ “How it works” diagram section  
-✅ IEEE paper citation block
+This repository is proprietary.
+Viewing is permitted, but **copying / modifying / redistributing is not
