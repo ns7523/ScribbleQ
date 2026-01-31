@@ -13,7 +13,8 @@ import streamlit.components.v1 as components
 from .backend.pytorch import DET_ARCHS, RECO_ARCHS, forward_image, load_predictor
 from hwte.io import DocumentFile
 from hwte.utils.visualization import visualize_page
-
+import logging
+logging.getLogger().setLevel(logging.ERROR)
 forward_device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 def main(det_archs, reco_archs):
@@ -115,7 +116,7 @@ def main(det_archs, reco_archs):
                                     out.pages[0].page,
                                     interactive=False,
                                     add_labels=False,
-                                    font_family=os.path.join(os.path.dirname(__file__), "DejaVuSans.ttf")
+                                    #font_family=os.path.join(os.path.dirname(__file__), "DejaVuSans.ttf")
                                 )
                 #fig = visualize_page(out.pages[0].export(), out.pages[0].page, interactive=False, add_labels=False)
                 cols[2].pyplot(fig)
