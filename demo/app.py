@@ -17,9 +17,15 @@ import logging
 logging.getLogger().setLevel(logging.ERROR)
 forward_device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+st.set_page_config(
+    page_title="ScribbleQ",
+    page_icon="🚀",
+)
+
 def main(det_archs, reco_archs):
     """Build a streamlit layout"""
     # Wide mode
+    
     st.set_page_config(layout="wide")
 
     # Designing the interface
