@@ -243,6 +243,7 @@ def main(det_archs, reco_archs):
     # Footer
     st.markdown("---")
     st.caption("© 2026 CraftIQ — Ns Akash (@craftiq). All rights reserved.")
+    st.caption("Inspired from Mindee")
            
 
 if __name__ == "__main__":
