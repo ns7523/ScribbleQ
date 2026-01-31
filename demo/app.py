@@ -156,26 +156,23 @@ def main(det_archs, reco_archs):
         # NOTE: Download and place DejaVuSans.ttf in your project directory for full Unicode support.
         def create_pdf(text, title="Extracted Text"):
             import os
+            import io
+
             pdf = FPDF()
             pdf.add_page()
+        
             font_path = "DejaVuSans.ttf"
             if os.path.exists(font_path):
                 pdf.add_font("DejaVu", "", font_path, uni=True)
                 pdf.set_font("DejaVu", size=12)
             else:
                 pdf.set_font("Helvetica", size=12)
+        
             pdf.multi_cell(0, 10, text)
-
-            # fpdf.output(dest="S") may return str, bytes, or bytearray depending on version
-            raw = pdf.output(dest="S")
-            if isinstance(raw, str):
-                pdf_bytes = raw.encode('latin1', errors='ignore')
-            elif isinstance(raw, bytearray):
-                pdf_bytes = bytes(raw)
-            else:
-                # assume bytes
-                pdf_bytes = raw
-
+        
+            # ✅ fpdf2 new output (no dest)
+            pdf_bytes = bytes(pdf.output())
+        
             return io.BytesIO(pdf_bytes)
 
         # Download Original Output
