@@ -58,6 +58,7 @@ This project is based on the open-source **Doctr** OCR library originally develo
 
 ## 📜 License
 This repository is released under a general open-source license for learning and demo purposes.
+“This repository is proprietary. Viewing is permitted, copying/modifying/redistributing is not allowed without written permission.”
 
 ---
 
