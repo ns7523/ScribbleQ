@@ -161,7 +161,7 @@ def main(det_archs, reco_archs):
     if st.session_state["recognized_text"].strip():
         st.subheader("🧾 Extracted Text")
         
-        c1, c2 = st.columns([0.92, 0.08], vertical_alignment="top")
+        c1, c2 = st.columns([0.93, 0.07], vertical_alignment="top")
         
         with c1:
             st.text_area(
@@ -171,8 +171,8 @@ def main(det_archs, reco_archs):
             )
         
         with c2:
-            st.markdown("####")  # spacing
-            if st.button("📋", key="copy_clipboard"):
+            st.markdown("<br>", unsafe_allow_html=True)  # spacing to align button
+            if st.button("📋", key="copy_clipboard", help="Copy to clipboard"):
                 components.html(
                     f"""
                     <script>
