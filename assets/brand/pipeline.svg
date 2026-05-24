@@ -1,0 +1,67 @@
+<svg width="1280" height="620" viewBox="0 0 1280 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="250" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2L10 6L2 10" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="620" rx="32" fill="url(#bg)"/>
+  <circle cx="1080" cy="104" r="220" fill="#C4B5FD" fill-opacity="0.11"/>
+  <circle cx="168" cy="526" r="250" fill="#67E8F9" fill-opacity="0.08"/>
+  <rect x="36" y="36" width="1208" height="548" rx="28" fill="#FFFFFF" fill-opacity="0.03" stroke="#FFFFFF" stroke-opacity="0.10"/>
+  <text x="86" y="94" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#94A3B8" letter-spacing="3">OCR INTELLIGENCE PIPELINE</text>
+  <text x="86" y="132" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="34" font-weight="760" fill="#F8FAFC">From unstructured handwriting to exportable digital text</text>
+
+  <g transform="translate(58 232)">
+    <rect width="200" height="132" rx="24" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <circle cx="46" cy="50" r="18" fill="#67E8F9" fill-opacity="0.14" stroke="#67E8F9" stroke-opacity="0.62"/>
+    <text x="78" y="56" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="730" fill="#F8FAFC">Input</text>
+    <text x="32" y="94" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">PDF, JPG, PNG</text>
+    <text x="32" y="116" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">document files</text>
+  </g>
+  <g transform="translate(302 232)">
+    <rect width="200" height="132" rx="24" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M34 46H68M34 60H60M34 74H72" stroke="#E5E7EB" stroke-opacity="0.78" stroke-width="4" stroke-linecap="round"/>
+    <text x="82" y="56" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="730" fill="#F8FAFC">Detect</text>
+    <text x="32" y="94" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Locate text regions</text>
+    <text x="32" y="116" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">and layout blocks</text>
+  </g>
+  <g transform="translate(546 232)">
+    <rect width="200" height="132" rx="24" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <rect x="31" y="34" width="36" height="36" rx="12" fill="#C4B5FD" fill-opacity="0.15" stroke="#C4B5FD" stroke-opacity="0.62"/>
+    <text x="82" y="56" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="730" fill="#F8FAFC">Read</text>
+    <text x="32" y="94" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Recognize handwritten</text>
+    <text x="32" y="116" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">text sequences</text>
+  </g>
+  <g transform="translate(790 232)">
+    <rect width="200" height="132" rx="24" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M35 66C45 40 58 84 72 34" stroke="#A7F3D0" stroke-opacity="0.78" stroke-width="5" stroke-linecap="round"/>
+    <text x="82" y="56" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="730" fill="#F8FAFC">Structure</text>
+    <text x="32" y="94" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">JSON-ready text</text>
+    <text x="32" y="116" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">and document data</text>
+  </g>
+  <g transform="translate(1034 232)">
+    <rect width="190" height="132" rx="24" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M34 72L50 34L68 72H34Z" fill="#FBBF24" fill-opacity="0.14" stroke="#FDE68A" stroke-opacity="0.58"/>
+    <text x="92" y="56" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="730" fill="#F8FAFC">Export</text>
+    <text x="32" y="94" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">TXT, PDF, JSON</text>
+    <text x="32" y="116" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">and translation</text>
+  </g>
+  <line x1="258" y1="298" x2="292" y2="298" stroke="#94A3B8" stroke-opacity="0.62" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="502" y1="298" x2="536" y2="298" stroke="#94A3B8" stroke-opacity="0.62" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="746" y1="298" x2="780" y2="298" stroke="#94A3B8" stroke-opacity="0.62" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="990" y1="298" x2="1024" y2="298" stroke="#94A3B8" stroke-opacity="0.62" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g transform="translate(170 438)">
+    <rect width="940" height="92" rx="24" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="40" y="39" font-family="Inter, ui-sans-serif, system-ui" font-size="17" font-weight="700" fill="#E5E7EB">Product Contract</text>
+    <text x="40" y="66" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">ScribbleQ converts handwritten documents into structured, searchable, and export-ready digital text.</text>
+  </g>
+</svg>
