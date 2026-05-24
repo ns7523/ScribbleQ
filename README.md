@@ -9,7 +9,10 @@
 </p>
 
 <p>
-  <code>Python</code> · <code>Streamlit</code> · <code>PyTorch</code> · <code>OCR</code> · <code>Document Processing</code>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/OCR-7C3AED?style=for-the-badge&logo=googledocs&logoColor=white" alt="OCR" />
 </p>
 
 </div>
@@ -120,72 +123,19 @@ flowchart LR
 
 ---
 
-## 06 · Tech Stack
-
-<table>
-<tr>
-<td width="25%" valign="top">
-
-**Application**
-
-Streamlit  
-Python
-
-</td>
-<td width="25%" valign="top">
-
-**AI / OCR**
-
-PyTorch  
-OCR Models
-
-</td>
-<td width="25%" valign="top">
-
-**Vision**
-
-OpenCV  
-NumPy  
-Matplotlib
-
-</td>
-<td width="25%" valign="top">
-
-**Utilities**
-
-FPDF2  
-Document Export
-
-</td>
-</tr>
-</table>
-
----
-
-## 07 · Installation
+## 06 · Installation
 
 ```bash
 git clone https://github.com/ns7523/ScribbleQ.git
 cd ScribbleQ
-```
-
-```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-For Windows PowerShell:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
 ---
 
-## 08 · Usage
+## 07 · Usage
 
 Run the Streamlit app:
 
@@ -214,7 +164,7 @@ print(result.export())
 
 ---
 
-## 09 · Project Structure
+## 08 · Project Structure
 
 ```text
 .
@@ -232,29 +182,15 @@ print(result.export())
 └── README.md
 ```
 
-Recommended structure:
+Suggested production structure:
 
 ```text
-.
-├── assets/
-│   ├── brand/
-│   └── screenshots/
-├── docs/
-│   ├── architecture.md
-│   ├── ocr-pipeline.md
-│   └── deployment.md
-├── demo/
-├── hwte/
-├── tests/
-├── examples/
-│   ├── input/
-│   └── output/
-└── requirements.txt
+docs/ · demo/ · hwte/ · tests/ · examples/ · assets/screenshots/ · requirements.txt
 ```
 
 ---
 
-## 10 · Screenshots & Assets
+## 09 · Visual Assets
 
 <table>
 <tr>
@@ -301,7 +237,7 @@ Visual overview of detection and recognition stages.
 
 ---
 
-## 11 · Future Improvements
+## 10 · Future Improvements
 
 - [ ] Add sample input and output examples.
 - [ ] Add OCR accuracy and latency benchmarks.
@@ -319,6 +255,11 @@ Visual overview of detection and recognition stages.
 
 **AI & Cybersecurity Engineer**
 
-[GitHub](https://github.com/ns7523) · [LinkedIn](https://www.linkedin.com/in/nsakash7523) · [Portfolio](https://nsakash.in) · [Email](mailto:nsakash752003@gmail.com)
+<p>
+  <a href="https://github.com/ns7523"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://nsakash.in"><img src="https://img.shields.io/badge/Portfolio-0A84FF?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio" /></a>
+  <a href="mailto:contact@nsakash.in"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/nsakash7523"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+</p>
 
 </div>
