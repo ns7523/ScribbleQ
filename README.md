@@ -1,122 +1,324 @@
 <div align="center">
-  <br />
-  <img src="https://via.placeholder.com/120x120/0a0a0a/ffffff?text=SQ" alt="ScribbleQ Icon" />
-  <br />
 
-  <h1 align="center">ScribbleQ (HWTE)</h1>
+<img src="assets/brand/hero.svg" alt="ScribbleQ" width="100%" />
 
-  <p align="center">
-    <strong>Advanced Handwritten Text Extraction & Digitization Architecture.</strong>
-  </p>
+<br />
 
-  <p align="center">
-    <a href="https://scribbleq.streamlit.app"><img src="https://img.shields.io/badge/Open_Live_Demo-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Live Demo"></a>
-    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch">
-    <img src="https://img.shields.io/badge/Python-3.10+-black?style=flat-square&logo=python" alt="Python">
-  </p>
+<p>
+  <strong>Digitize documents.</strong> <strong>Recognize handwritten content.</strong> <strong>Export structured text.</strong>
+</p>
+
+<p>
+  <code>Python</code> · <code>Streamlit</code> · <code>PyTorch</code> · <code>OCR</code> · <code>Document Processing</code>
+</p>
+
 </div>
 
-<br />
+---
 
-## Overview
+<div align="center">
 
-**ScribbleQ** (Handwritten Text Extraction - HWTE) is an end-to-end Optical Character Recognition (OCR) pipeline designed to extract handwritten text from unstructured documents (PDFs, JPGs, PNGs) and seamlessly digitize it. Built upon a robust PyTorch foundation, the system provides both structural text detection and high-fidelity text recognition, packaged in an interactive Streamlit application.
+<table>
+<tr>
+<td align="center" width="25%"><strong>Type</strong><br />OCR Application</td>
+<td align="center" width="25%"><strong>Input</strong><br />PDF / JPG / PNG</td>
+<td align="center" width="25%"><strong>Output</strong><br />Text / JSON / PDF</td>
+<td align="center" width="25%"><strong>Interface</strong><br />Streamlit</td>
+</tr>
+</table>
 
-### Research & Engineering Significance
-ScribbleQ addresses the complex challenge of digitizing non-standardized handwriting variations. By utilizing state-of-the-art vision models and transformer-based architectures, the platform significantly reduces transcription overhead while maintaining precision across varied handwriting styles.
+</div>
 
-<br />
+---
 
-## System Architecture
+## 01 · Overview
 
-```mermaid
-graph LR
-    A[Document Input] --> B(Text Detection Model)
-    B --> C(Text Recognition Engine)
-    C --> D{Structured JSON Output}
-    D -->|Export| E[PDF / TXT]
-    D -->|Translate| F[Multi-Lingual Text]
-```
+<table>
+<tr>
+<td width="58%" valign="top">
 
-<br />
+### Handwritten document digitization system
 
-## Core Features
+**ScribbleQ** is an OCR-based document intelligence application for converting handwritten documents into clean digital text.
 
-- **End-to-End OCR Pipeline**: Integrated Text Detection + Text Recognition for maximal accuracy.
-- **Multi-Modal Input Support**: Native processing for both multi-page PDFs and standard image formats.
-- **Structured Data Extraction**: Delivers outputs in machine-readable JSON format for downstream NLP tasks.
-- **Enterprise Utilities**: Built-in PDF/TXT exports and optional machine translation via `googletrans`.
-- **Interactive UI**: Rapid testing environment powered by Streamlit.
+The system combines document input handling, text-region detection, recognition, structured output, and an interactive Streamlit interface for fast document processing.
 
-<br />
-
-## Tech Stack
-
-| Layer | Technologies |
-| --- | --- |
-| **Core AI/ML** | PyTorch, Mindee OCR Engine |
-| **Computer Vision** | OpenCV, NumPy, Matplotlib |
-| **Application Layer** | Streamlit, Python |
-| **Utilities** | `fpdf2` (Document Gen), `googletrans` (Translation) |
-
-<br />
-
-## Project Structure
+</td>
+<td width="42%" valign="top">
 
 ```text
-scribbleq/
-├── demo/
-│   ├── app.py
-│   ├── DejaVuSans.ttf
-│   └── backend/
-│       └── pytorch.py
-├── hwte/                   # Core OCR modeling and I/O logic
-├── streamlit_app.py        # Streamlit entry point
-└── requirements.txt
+┌──────────────────────────────┐
+│  SCRIBBLEQ OCR CONSOLE       │
+├──────────────────────────────┤
+│  Input      PDF / Image      │
+│  Detect     Text Regions     │
+│  Recognize  Handwriting      │
+│  Output     Text / JSON      │
+│  UI         Streamlit        │
+└──────────────────────────────┘
 ```
 
-<br />
+</td>
+</tr>
+</table>
 
-## Quick Start
+---
 
-### Python API Integration
+## 02 · OCR Pipeline
 
-ScribbleQ can be integrated directly into larger data processing pipelines.
+<img src="assets/brand/pipeline.svg" alt="ScribbleQ OCR pipeline" width="100%" />
+
+---
+
+## 03 · System Architecture
+
+```mermaid
+flowchart TD
+    A[PDF / Image Input] --> B[Document Loader]
+    B --> C[Text Detection]
+    C --> D[Text Recognition]
+    D --> E[Structured Output]
+    E --> F[Text Export]
+    E --> G[PDF Export]
+    E --> H[JSON Export]
+    I[Streamlit UI] --> B
+```
+
+---
+
+## 04 · Key Features
+
+| Feature | Purpose |
+|---|---|
+| Handwritten OCR | Converts handwritten document content into digital text. |
+| Multi-format input | Supports PDFs and common image formats. |
+| Detection and recognition flow | Separates page analysis from text recognition for cleaner processing. |
+| Structured output | Produces data that can be reused in downstream workflows. |
+| Export utilities | Supports text, JSON, and PDF-oriented output paths. |
+| Streamlit interface | Provides a simple interactive upload and processing experience. |
+
+---
+
+## 05 · AI Workflow
+
+```mermaid
+flowchart LR
+    A[Document] --> B[Preprocess]
+    B --> C[Detect Text Blocks]
+    C --> D[Recognize Text]
+    D --> E[Assemble Output]
+    E --> F[Export]
+```
+
+| Stage | Output |
+|---|---|
+| Input loading | PDF or image document converted into processable pages. |
+| Detection | Located text regions and layout blocks. |
+| Recognition | Handwritten content converted into digital text. |
+| Structuring | Text arranged into export-ready payloads. |
+| Export | Text, JSON, or PDF output. |
+
+---
+
+## 06 · Tech Stack
+
+<table>
+<tr>
+<td width="25%" valign="top">
+
+**Application**
+
+Streamlit  
+Python
+
+</td>
+<td width="25%" valign="top">
+
+**AI / OCR**
+
+PyTorch  
+OCR Models
+
+</td>
+<td width="25%" valign="top">
+
+**Vision**
+
+OpenCV  
+NumPy  
+Matplotlib
+
+</td>
+<td width="25%" valign="top">
+
+**Utilities**
+
+FPDF2  
+Document Export
+
+</td>
+</tr>
+</table>
+
+---
+
+## 07 · Installation
+
+```bash
+git clone https://github.com/ns7523/ScribbleQ.git
+cd ScribbleQ
+```
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+For Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+---
+
+## 08 · Usage
+
+Run the Streamlit app:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Open the local interface:
+
+```text
+http://localhost:8501
+```
+
+Python API example:
 
 ```python
 from hwte.io import DocumentFile
 from hwte.models import ocr_predictor
 
-# Initialize the pre-trained OCR model
 model = ocr_predictor(pretrained=True)
-
-# Load document into memory
-doc = DocumentFile.from_pdf("path/to/your/document.pdf")
-
-# Execute inference
+doc = DocumentFile.from_pdf("document.pdf")
 result = model(doc)
 
-# Export structured JSON payload
-json_output = result.export()
-print(json_output)
+print(result.export())
 ```
 
-<br />
+---
 
-## Roadmap & Future Enhancements
+## 09 · Project Structure
 
-- [ ] Implementation of custom fine-tuned weights for domain-specific handwriting (e.g., medical prescriptions).
-- [ ] Optimization of inference latency for edge deployment.
-- [ ] Advanced layout analysis for complex multi-column documents.
+```text
+.
+├── assets/
+│   └── brand/
+│       ├── hero.svg
+│       └── pipeline.svg
+├── demo/
+│   ├── app.py
+│   └── backend/
+│       └── pytorch.py
+├── hwte/
+├── streamlit_app.py
+├── requirements.txt
+└── README.md
+```
 
-<br />
+Recommended structure:
 
-## Acknowledgements & Usage Policy
+```text
+.
+├── assets/
+│   ├── brand/
+│   └── screenshots/
+├── docs/
+│   ├── architecture.md
+│   ├── ocr-pipeline.md
+│   └── deployment.md
+├── demo/
+├── hwte/
+├── tests/
+├── examples/
+│   ├── input/
+│   └── output/
+└── requirements.txt
+```
 
-- **Core OCR Engine**: Built utilizing open-source models originally developed by Mindee.
-- **License**: This repository is proprietary and published strictly for learning and demonstration purposes. Viewing is permitted, but copying, modifying, or redistributing the code is prohibited.
+---
+
+## 10 · Screenshots & Assets
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Upload Interface
+
+`assets/screenshots/upload-interface.png`
+
+Streamlit upload and document selection flow.
+
+</td>
+<td width="50%" valign="top">
+
+### OCR Result
+
+`assets/screenshots/ocr-result.png`
+
+Recognized text output.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Export View
+
+`assets/screenshots/export-view.png`
+
+Text, PDF, and JSON export options.
+
+</td>
+<td width="50%" valign="top">
+
+### Pipeline View
+
+`assets/screenshots/pipeline-view.png`
+
+Visual overview of detection and recognition stages.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 11 · Future Improvements
+
+- [ ] Add sample input and output examples.
+- [ ] Add OCR accuracy and latency benchmarks.
+- [ ] Add screenshots under `assets/screenshots/`.
+- [ ] Add deployment notes for Streamlit Cloud.
+- [ ] Add tests for input loading and export utilities.
+- [ ] Add documentation for OCR model components.
+- [ ] Add a clear license file.
+
+---
 
 <div align="center">
-  <br />
-  <sub>Architected by <a href="https://github.com/ns7523">N S AKASH (@craftiq)</a> • AI & ML Engineer</sub>
+
+### N S Akash
+
+**AI & Cybersecurity Engineer**
+
+[GitHub](https://github.com/ns7523) · [LinkedIn](https://www.linkedin.com/in/nsakash7523) · [Portfolio](https://nsakash.in) · [Email](mailto:nsakash752003@gmail.com)
+
 </div>
