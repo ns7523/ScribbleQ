@@ -5,6 +5,7 @@ torch
 torchvision
 fpdf2
 googletrans==4.0.0rc1
-python-doctr
+python-doctr==0.8.1
 Pillow
-opencv-python-headless==4.13.0.92
+opencv-python-headless==4.8.1.78
+opencv-python==4.8.1.78
