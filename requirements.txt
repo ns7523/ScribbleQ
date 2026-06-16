@@ -1,6 +1,6 @@
 streamlit==1.35.0
 numpy==1.26.4
-matplotlib==3.8.4
+matplotlib==3.11.0
 torch==2.2.2
 torchvision==0.17.2
 fpdf2==2.8.2
