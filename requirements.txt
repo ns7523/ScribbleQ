@@ -6,7 +6,5 @@ torchvision==0.17.2
 fpdf2==2.8.2
 googletrans==4.0.0rc1
 Pillow==10.3.0
-
 opencv-python==4.8.1.78
-
--e git+https://github.com/mindee/doctr.git#egg=python-doctr
+-e git+https://github.com/mindee/doctr.git@v0.8.1#egg=python-doctr[viz]
