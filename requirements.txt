@@ -1,6 +1,5 @@
 streamlit
 numpy
-opencv-python-headless
 matplotlib
 torch
 torchvision
@@ -8,3 +7,4 @@ fpdf2
 googletrans==4.0.0rc1
 python-doctr
 Pillow
+opencv-python-headless==4.13.0.92
